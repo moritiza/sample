@@ -9,5 +9,12 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+    /**
+     * Store log
+     *
+     * @var array
+     */
+    protected $_log = [];
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
