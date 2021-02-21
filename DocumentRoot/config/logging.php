@@ -99,6 +99,18 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'api_management_exceptions' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/api-management-exceptions.log'),
+            'level' => 'debug',
+        ],
+
+        'api_database_exceptions' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/api-database-exceptions.log'),
+            'level' => 'debug',
+        ],
     ],
 
 ];
