@@ -19,7 +19,7 @@ services:
       - 80:80
     volumes:
       - ./DocumentRoot:/var/www/html
-    command: bash -c 'cd /var/www/html && php artisan migrate:fresh && php artisan serve --host=0.0.0.0 --port=80'
+    command: bash -c 'cd /var/www/html && php artisan migrate:fresh --seed && php artisan serve --host=0.0.0.0 --port=80'
 
   database:
     container_name: database
