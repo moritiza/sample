@@ -23,6 +23,9 @@ class CreateVotesTable extends Migration
                 ->comment('Vote of the comment => from 1 to 5');
             $table->timestamps();
 
+            $table->index('user_id');
+            $table->index('product_id');
+
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';

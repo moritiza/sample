@@ -24,8 +24,10 @@ class CreateProductsTable extends Migration
             $table->boolean('vote')->default(0)
                 ->comment('Ability to submit votes => 0 for no - 1 for yes');
             $table->boolean('buyer_comment_vote')->default(0)
-                ->comment('Will only buyers be able to submit comments? => 0 for no - 1 for yes');
+                ->comment('Will only buyers be able to submit comments and votes? => 0 for no - 1 for yes');
             $table->timestamps();
+
+            $table->index('provider_id');
 
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';

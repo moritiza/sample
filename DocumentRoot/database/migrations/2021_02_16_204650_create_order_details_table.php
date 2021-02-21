@@ -19,6 +19,9 @@ class CreateOrderDetailsTable extends Migration
             $table->unsignedTinyInteger('product_id')->comment('Product ID of the detail');
             $table->timestamps();
 
+            $table->index('order_id');
+            $table->index('product_id');
+
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';

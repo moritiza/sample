@@ -19,6 +19,8 @@ class CreateOrdersTable extends Migration
             $table->string('city', 255)->comment('City name of shipping details');
             $table->timestamps();
 
+            $table->index('user_id');
+
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';

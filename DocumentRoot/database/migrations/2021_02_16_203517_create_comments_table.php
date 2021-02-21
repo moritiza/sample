@@ -22,13 +22,16 @@ class CreateCommentsTable extends Migration
             $table->text('description')->comment('Content of the comment');
             $table->timestamps();
 
+            $table->index('user_id');
+            $table->index('product_id');
+
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
         });
     }
 
-    /**
+    /**users
      * Reverse the migrations.
      *
      * @return void
